@@ -1,8 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import * as React from "react";
-// @ts-ignore
 import { Admin, Resource } from "react-admin";
-// @ts-ignore
 import {
   FirebaseAuthProvider,
   FirebaseDataProvider,
@@ -19,7 +17,7 @@ import {
 
 const theme = createMuiTheme({
   palette: {
-    type: "dark", // Switching the dark mode on is a single property value change.
+    type: "light", // Switching the dark mode on is a single property value change.
   },
 });
 

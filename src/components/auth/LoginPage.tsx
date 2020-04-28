@@ -1,7 +1,6 @@
 import firebase from "firebase";
 import React from "react";
 import { Login, LoginForm } from "react-admin";
-// @ts-ignore
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import ForgotPasswordButton from "./ForgotPassword";
 import { useAlternativeLoginStyle } from "./LoginPage.styles";

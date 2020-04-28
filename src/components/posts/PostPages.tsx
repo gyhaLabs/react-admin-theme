@@ -2,7 +2,6 @@
 import RichTextInput from "ra-input-rich-text";
 import * as React from "react";
 // tslint:disable-next-line:no-var-requires
-// @ts-ignore
 import {
   Create,
   Datagrid,
