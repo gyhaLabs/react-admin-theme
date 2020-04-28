@@ -8,12 +8,14 @@ import {
 } from "react-admin-firebase";
 import NotFound from "./components/404/NotFound";
 import CustomLoginPage from "./components/auth/LoginPage";
+import AppLayout from "./components/layout/AppLayout";
+import Dashboard from "./components/pages/Dashboard";
 import {
   PostCreate,
   PostEdit,
   PostList,
   PostShow,
-} from "./components/posts/PostPages";
+} from "./components/pages/PostPages";
 
 const theme = createMuiTheme({
   palette: {
@@ -34,9 +36,11 @@ class App extends React.Component {
   render() {
     return (
       <Admin
+        layout={AppLayout}
         title="Demo App"
         theme={theme}
         catchAll={NotFound}
+        dashboard={Dashboard}
         dataProvider={dataProvider}
         authProvider={authProvider}
         loginPage={CustomLoginPage}
