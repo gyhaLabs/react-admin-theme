@@ -1,15 +1,18 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import * as React from "react";
-import { Admin, Resource } from "react-admin";
+import { Admin, Logout, Resource } from "react-admin";
 import {
   FirebaseAuthProvider,
   FirebaseDataProvider,
   RAFirebaseOptions,
 } from "react-admin-firebase";
+import { Route } from "react-router-dom";
 import NotFound from "./components/404/NotFound";
 import CustomLoginPage from "./components/auth/LoginPage";
 import AppLayout from "./components/layout/AppLayout";
 import Dashboard from "./components/pages/Dashboard";
+import Miscellaneous from "./components/pages/Miscellaneous";
 import {
   PostCreate,
   PostEdit,
@@ -32,6 +35,10 @@ const options: RAFirebaseOptions = {
 const dataProvider = FirebaseDataProvider(config, options);
 const authProvider = FirebaseAuthProvider(config, options);
 
+const MyLogoutButton = (props: JSX.IntrinsicAttributes) => (
+  <Logout {...props} icon={<ExitToAppIcon />} />
+);
+
 class App extends React.Component {
   render() {
     return (
@@ -39,14 +46,19 @@ class App extends React.Component {
         layout={AppLayout}
         title="Demo App"
         theme={theme}
+        logoutButton={MyLogoutButton}
         catchAll={NotFound}
         dashboard={Dashboard}
         dataProvider={dataProvider}
         authProvider={authProvider}
         loginPage={CustomLoginPage}
+        customRoutes={[
+          <Route path="/miscellaneous" component={Miscellaneous} />,
+        ]}
       >
         <Resource
           name="posts"
+          options={{ label: "Posts" }}
           list={PostList}
           show={PostShow}
           create={PostCreate}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "react-admin";
 import AppBar from "./components/AppBar";
+import Menu from "./components/Menu";
 import Notification from "./components/Notification";
 import Sidebar from "./components/Sidebar";
 
@@ -9,6 +10,7 @@ const AppLayout = (props: JSX.IntrinsicAttributes) => (
     {...props}
     appBar={AppBar}
     sidebar={Sidebar}
+    menu={Menu}
     notification={Notification}
   />
 );

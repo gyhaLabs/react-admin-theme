@@ -39,7 +39,10 @@ const CustomLoginForm = (props: JSX.IntrinsicAttributes) => (
 );
 
 const CustomLoginPage = (props: JSX.IntrinsicAttributes) => (
-  <Login {...props}>
+  <Login
+    {...props}
+    backgroundImage="https://source.unsplash.com/random/1600x900/daily"
+  >
     <CustomLoginForm {...props} />
   </Login>
 );
