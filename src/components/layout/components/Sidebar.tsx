@@ -6,6 +6,7 @@ const useSidebarStyles = makeStyles({
   drawerPaper: {
     backgroundColor: "#eee",
     padding: 0,
+    margin: 0,
   },
 });
 
