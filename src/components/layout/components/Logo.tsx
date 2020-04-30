@@ -7,7 +7,7 @@ const useLogoStyle = makeStyles({
         height: "auto",
         minWidth: 80,
         borderRadius: 3,
-        padding: 4,
+        padding: 2,
         background: "#fff",
     },
 });
@@ -17,7 +17,7 @@ const MyLogo = () => {
     return (
         <Avatar
             className={classes.avatar}
-            src="https://www.gam.com.br/index/wp-content/uploads/2017/10/default-logo.png"
+            src="https://source.unsplash.com/random/80x40/daily"
         />
     );
 };

@@ -33,6 +33,14 @@ const LocaleSwitcher = () => {
             >
                 fr
             </Button>
+            <Button
+                variant="contained"
+                className={classes.button}
+                color={locale === "ro" ? "primary" : "default"}
+                onClick={() => setLocale("ro")}
+            >
+                ro
+            </Button>
         </div>
     );
 };

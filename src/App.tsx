@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import polyglotI18nProvider from "ra-i18n-polyglot";
-//import romanianMessages from "ra-language-romanian";
+import romanianMessages from "ra-language-romanian";
 import * as React from "react";
 import { Admin, Logout, Resource } from "react-admin";
 import {
@@ -48,7 +48,7 @@ const i18nProvider = polyglotI18nProvider((locale) => {
         return import("./i18n/fr").then((messages) => messages.default);
     } else {
         if (locale === "ro") {
-            //return romanianMessages;
+            return romanianMessages;
         }
     }
 
